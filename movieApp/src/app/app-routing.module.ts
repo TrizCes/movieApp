@@ -3,10 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './Paginas/home/home.component';
 import { LoginComponent } from './Paginas/login/login.component';
+import { MoviesComponent } from './Paginas/movies/movies.component';
+import { LoginGuard } from './services/login.guard';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'login', component: LoginComponent}
+  {path:'', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'movies', component: MoviesComponent},
 ];
 
 @NgModule({

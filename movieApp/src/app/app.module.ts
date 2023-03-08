@@ -10,6 +10,7 @@ import { MoviesComponent } from './Paginas/movies/movies.component';
 import { LoginComponent } from './Paginas/login/login.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { CardMovieComponent } from './components/card-movie/card-movie.component';
+import { ListMovieComponent } from './components/list-movie/list-movie.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CardMovieComponent } from './components/card-movie/card-movie.component
     MoviesComponent,
     LoginComponent,
     FormsComponent,
-    CardMovieComponent
+    CardMovieComponent,
+    ListMovieComponent
   ],
   imports: [
     BrowserModule,
