@@ -13,7 +13,7 @@ export class FormsComponent implements OnInit{
   ngOnInit() {
     this.myForm = this.fb.group({
       email: ['', [Validators, String]],
-      password: ['']
+      password: ['', [Validators, String]],
     });
   }
 

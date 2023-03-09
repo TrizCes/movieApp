@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListMovieComponent } from "src/app/components/list-movie/list-movie.component";
 
 @Component({
   selector: 'app-home',

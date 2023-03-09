@@ -1,0 +1,35 @@
+.home-container{
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.list1 {
+  border-radius: 0px 24px 24px 0px;
+  box-shadow: 4px 2px 16px 4px rgba(203, 202, 202, 0.2);
+}
+div .list .list-genders{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+  list-style: none;
+  border: 0.8px solid rgba(203, 202, 202, 0.1);
+}
+
+.gender{
+  transition: 300ms;
+}
+
+.gender:hover{
+  font-size: 1.2rem;
+}
+
+.gender a{
+  text-decoration: none;
+}
+
+img{
+  width: fit-content;
+}

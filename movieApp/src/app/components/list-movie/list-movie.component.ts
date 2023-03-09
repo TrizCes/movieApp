@@ -1,7 +1,4 @@
-import { Component} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { API_GENRES } from 'src/app/environments/enviroments';
+import { Component, OnInit, Input} from '@angular/core';
 import { List } from 'src/app/class/list'
 
 @Component({
@@ -9,10 +6,13 @@ import { List } from 'src/app/class/list'
   templateUrl: './list-movie.component.html',
   styleUrls: ['./list-movie.component.scss']
 })
-export class ListMovieComponent {
-  constructor(private _httpClient: HttpClient) { }
+export class ListMovieComponent implements OnInit {
 
-  public getGenres(): Observable<List[]>{
-    return this._httpClient.get<List[]>(API_GENRES)
+ @Input() list: List[] = [];
+
+  constructor(){}
+
+  ngOnInit(): void {
+
   }
 }
