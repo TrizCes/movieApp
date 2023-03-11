@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MovieInfClass } from 'src/app/class/movie-inf';
-import { CardMovieService } from 'src/app/services/card-movie.service';
+
 
 @Component({
   selector: 'app-card-movie',
@@ -10,12 +10,11 @@ import { CardMovieService } from 'src/app/services/card-movie.service';
 
 export class CardMovieComponent implements OnInit {
 
-  @Input() movies: any[] = [];
+  @Input() movies: MovieInfClass[] = [];
 
-  constructor(private  _cardMovieService: CardMovieService){}
+  constructor(){}
 
   ngOnInit(): void {
-    this._cardMovieService.getMovies().subscribe((res)=>{this.movies = res})
   }
 
 }
