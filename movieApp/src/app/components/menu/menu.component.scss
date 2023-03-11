@@ -9,6 +9,10 @@ div{
   align-items: center;
 }
 
+img{
+  width: 150px;
+}
+
 ul{
   width: 30vw;
   display: flex;
@@ -21,4 +25,40 @@ a{
  text-decoration: none;
  font-family: 'Poppins', sans-serif;
  font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+  header{
+    flex-direction: column;
+  }
+  ul{
+    width: 99vw;
+    margin-bottom: 32px;
+  }
+
+  img{
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 979px) {
+  header{
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-around;
+  }
+
+  div{
+    align-items: center;
+    justify-content: space-around;
+  }
+  ul{
+    width: 80vw;
+    margin-bottom: 32px;
+  }
+
+  img{
+    width: 70vw;
+  }
 }

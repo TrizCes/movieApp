@@ -1,0 +1,31 @@
+.card{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.card .conteiner{
+  display: flex;
+  width: 25vw;
+  flex-direction: column;
+}
+
+.movie-title{
+  font-size: 16px;
+
+}
+
+.movie-title:hover{
+  font-size: 26px;
+  text-decoration:underline red;
+}
+
+.list-style{
+  list-style: none;
+
+}
+
+.list-style li{
+  font-size: 12px;
+}

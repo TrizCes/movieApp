@@ -28,8 +28,57 @@ div .list .list-genders{
 
 .gender a{
   text-decoration: none;
+  text-align: center;
+}
+
+.img-container{
+  width: 86vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 img{
   width: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+  .home-container{
+    width: 100vw;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+  }
+
+  div .list .list-genders{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  img{
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 979px) {
+  .home-container{
+    width: 100vw;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+  }
+
+  div .list .list-genders{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  img{
+    width: 80vw;
+  }
 }

@@ -1,24 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.scss']
 })
-export class FormsComponent implements OnInit{
-  myForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+export class FormsComponent implements OnInit{
+
+  loginForm!: FormGroup;
+
+  constructor(private fb: FormBuilder, private authService: AuthService) { }
+
   ngOnInit() {
-    this.myForm = this.fb.group({
-      email: ['', [Validators, String]],
-      password: ['', [Validators, String]],
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
-  onSubmit() {
-    console.log(this.myForm.value);
-  };
+  loginSubmit() {
+    if (!this.loginForm.valid) {
+      console.error("Login failed");
+      return;
+    }
+    this.authService.login(this.loginForm.value);
 
+    /* //Rota alternativa:
+    const email = this.loginForm.get('email')?.value;
+    const password = this.loginForm.get('password')?.value;
+    this.authService.loggedIn(email, password);
+    */
+};
 }
