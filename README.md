@@ -6,6 +6,9 @@ Este projeto faz parte do programa de formação de desenvolvedores Full Stack [
 
 O MovieApp é a página web do lado do cliente de um serviço de streaming de filmes, projetado com um visual minimalista para permitir que os usuários se concentrem no que realmente importa: assistir!
 
+![alt text](login.png)
+![alt text](home.png) 
+
 ## Como Utilizar a Aplicação
 
 Para utilizar a aplicação, é necessário:
