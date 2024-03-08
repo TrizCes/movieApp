@@ -1,16 +1,21 @@
 .home-container{
   width: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   align-content: center;
   justify-content: space-between;
 }
 
-.list1 {
+.list-bar{
+  flex-direction: column;
+}
+
+.list {
   border-radius: 0px 24px 24px 0px;
   box-shadow: 4px 2px 16px 4px rgba(203, 202, 202, 0.2);
 }
-div .list .list-genders{
+
+.list .list-genders{
   display: flex;
   flex-wrap: wrap;
   padding: 8px;
@@ -29,17 +34,17 @@ div .list .list-genders{
 .gender a{
   text-decoration: none;
   text-align: center;
+  font-size: 12px;
 }
 
 .img-container{
-  width: 86vw;
+  width: 85vw;
   display: flex;
-  align-items: center;
   justify-content: space-around;
 }
 
 img{
-  width: fit-content;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {

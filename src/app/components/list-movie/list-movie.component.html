@@ -1,0 +1,18 @@
+<section class="home-container">
+  <nav class="list-bar">
+  <div class="list" *ngFor="let item of list">
+    <ul class="list-genders">
+      <li class="gender">
+        <a [routerLink]="['/movies']">{{ item.name }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  <div class="img-container">
+    <img
+      src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
+      alt="ilustração"
+    />
+  </div>
+</section>
